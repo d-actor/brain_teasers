@@ -95,5 +95,15 @@ $('.longSubmit').click( function(){
       longest = longArray[i]
     }
   }
-  $('.longAnswer').html("The longest word is: \n" + longest)
+  $('.longAnswer').html("The longest word is: " + longest)
 });
+
+// ---vowel counter--- \\
+// Note : As the letter 'y' can be regarded as both a vowel and a consonant, we do not count 'y' as vowel here.
+// Example string : 'The quick brown fox'
+// Expected Output : 5
+
+// html framework
+// js input framework
+// vowel count logic
+// html back
