@@ -99,11 +99,23 @@ $('.longSubmit').click( function(){
 });
 
 // ---vowel counter--- \\
-// Note : As the letter 'y' can be regarded as both a vowel and a consonant, we do not count 'y' as vowel here.
-// Example string : 'The quick brown fox'
-// Expected Output : 5
+var vowels = []
 
-// html framework
-// js input framework
-// vowel count logic
-// html back
+$('.vowelSubmit').click( function(){
+  var varArray = document.getElementById('vowelInput').value.toLowerCase().split("")
+  for ( i = 0 ; i < varArray.length ; i++){
+      var letter = varArray[i];
+      if(letter === "a"){
+        vowels.push(letter)
+      } else if (letter === "e"){
+        vowels.push(letter)
+      } else if (letter === "i"){
+        vowels.push(letter)
+      } else if (letter === "o"){
+        vowels.push(letter)
+      } else if (letter === "u"){
+        vowels.push(letter)
+      }
+  }
+  $('.vowelAnswer').html("There are " + vowels.length + " vowels in that word/phrase.")
+});
