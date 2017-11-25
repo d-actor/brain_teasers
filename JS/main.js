@@ -121,21 +121,15 @@ $('.vowelSubmit').click( function(){
 });
 
 // ---prime checker--- \\
-// Write a script that accepts a number as a parameter and checks if the number is prime or not.
-//**note : A prime number (or a prime) is a natural number greater than 1
-//**that has no positive divisors other than 1 and itself.
-
-// logic
-// return answer to html
 
 $('.primeSubmit').click( function(){
   var number = document.getElementById('primeInput').value
-    for ( x = 2 ; x < number - 1 ; x++){
-      if( number % x === 0 ){
-        $('.primeAnswer').html("Not a prime.")
-      } else {
-        $('.primeAnswer').html("Truly prime!")
-      }
+  for ( x = 2 ; x < (number - 1) ; x++){
+    if( number % x === 0 ){
+      $('.primeAnswer').html("Not a prime.")
+      break;
+    } else if ( number % 1 === 0 ){
+      $('.primeAnswer').html("Truly prime!")
     }
   }
 });
