@@ -95,7 +95,10 @@ def alph_order
     end
   end
   @alph_order.sort_by! { |hsh| hsh[:value] }
-  puts @alph_order.join("\n").red
+
+  @alph_order.each do |hsh|
+    puts "#{hsh[:letter]}".red + " \n"
+  end
 end
 
 menu
