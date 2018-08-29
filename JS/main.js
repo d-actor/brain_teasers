@@ -124,7 +124,7 @@ $('.vowelSubmit').click( function(){
 
 $('.primeSubmit').click( function(){
   var number = document.getElementById('primeInput').value
-  for ( x = 2 ; x < (number - 1) ; x++){
+  for ( x = 2 ; x <= (number - 1) ; x++){
     if( number % x === 0 ){
       $('.primeAnswer').html("Not a prime.")
       break;
@@ -133,3 +133,4 @@ $('.primeSubmit').click( function(){
     }
   }
 });
+
